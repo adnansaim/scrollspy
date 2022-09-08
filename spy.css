@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+  background-color: #012333;
+}
+
+.navbar, .scrollNav {
+  z-index: 111;
+  width: 100%;
+  background-color: white;
+  height: 80px;
+}
+.navbar .nav-container, .scrollNav .nav-container {
+  z-index: 999;
+  border-radius: 10px;
+  height: 80px;
+  top: 0;
+  width: 75%;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s all linear;
+}
+.navbar .nav-container .nav-logo, .scrollNav .nav-container .nav-logo {
+  font-size: 1.7rem;
+  color: rgb(24, 209, 184);
+  cursor: pointer;
+}
+.navbar .nav-container .nav-logo span, .scrollNav .nav-container .nav-logo span {
+  color: rgb(28, 255, 198);
+}
+.navbar .nav-container .navLinks, .scrollNav .nav-container .navLinks {
+  display: flex;
+  list-style: none;
+}
+.navbar .nav-container .navLinks .navlink a, .scrollNav .nav-container .navLinks .navlink a {
+  padding: 0.8rem 1.8rem;
+  border-radius: 100px;
+  margin-left: 1rem;
+  text-decoration: none;
+  color: rgb(48, 42, 42);
+  font-size: 17px;
+  font-weight: 500;
+  transition: 0.2s all ease;
+}
+.navbar .nav-container .navLinks .navlink a:hover, .scrollNav .nav-container .navLinks .navlink a:hover {
+  background-color: rgb(0, 152, 212);
+  color: white !important;
+}
+
+.scrollNav {
+  display: block;
+  width: 80%;
+  right: 50%;
+  transform: translateX(50%);
+  border-radius: 10px;
+  position: fixed;
+  top: -100%;
+  opacity: 0;
+  transition: 0.5s all ease-in;
+}
+.scrollNav .nav-container {
+  width: 100%;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section h2 {
+  font-size: 10rem;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  height: 180px;
+}
+section h2 #first {
+  position: absolute !important;
+  transform: translateY(100%);
+  transition: 0.3s all linear;
+}
+section h2 #second {
+  position: relative;
+  display: block;
+  transition: 0.3s all linear;
+}
+
+.active {
+  background-color: rgb(0, 152, 212);
+  color: white !important;
+}
+
+/*# sourceMappingURL=spy.css.map */
